@@ -1,0 +1,17 @@
+from cvzone.HandTrackingModule import HandDetector
+dectector = HandDetector()
+myhand = dectector.findHands(photo)
+cv2.imshow("Hi KRITI" , photo )
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+mylmlist = myhand[0][0]
+myfingerup = dectector.fingersUp(mylmlist)
+
+import os
+if myfingerup == [1,1,1,1,1]:
+    os.system("notepad")
+elif myfingerup == [0,1,1,0,0]:
+    os.system("chrome")
+else:
+    print("idk")
