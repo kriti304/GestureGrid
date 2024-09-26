@@ -1,5 +1,5 @@
 # Azure VM and Gesture Control Integration
-It combines of Azure Virtual Machine creation and a simple hand gesture-based control using computer vision.
-The first part connects to Azure using the Azure CLI credentials and creates a virtual network interface (NIC) and a Windows VM. The VM uses a specific hardware profile and a pre-configured Windows Server image, with a username and password set for login.
 
-The second part uses cvzone's HandTrackingModule to detect hand gestures from a photo. Based on the detected finger positions, it opens Notepad if all fingers are up, Chrome if only the index and middle fingers are up, or prints "idk" for other gestures.
+This project integrates Azure Virtual Machine creation with hand gesture control using computer vision. The first component utilizes Azure CLI credentials to establish a connection and create a virtual network interface (NIC) along with a Windows VM, configured with a specific hardware profile and a pre-defined Windows Server image, including secure login credentials.
+
+The second component employs `cvzone`'s HandTrackingModule to recognize hand gestures from an image. Depending on the gesture detected, the application opens Notepad when all fingers are raised, opens Chrome for specific fingers, or outputs "idk" for unrecognized gestures.
